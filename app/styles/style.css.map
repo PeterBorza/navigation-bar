@@ -18,10 +18,7 @@
         "_variables.scss",
         "_buttons.scss",
         "_mixins.scss",
-        "_variables.scss",
-        "_footer.scss",
-        "_variables.scss",
-        "_mixins.scss"
+        "_variables.scss"
     ],
     "names": [],
     "file": "style.css"
