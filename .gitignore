@@ -1,2 +1,3 @@
 /.vscode
-/.javascript.js
+app/js/javascript.js
+app/styles/_main.scss
