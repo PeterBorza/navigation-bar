@@ -9,9 +9,7 @@
     left: 50%;
     top: 55%;
     transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include fCenter(column);
     /* background-color: rgba(22, 22, 22, 0.6); */
     /* display: none;  */
     opacity: 0;
