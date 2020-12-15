@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     tl.from(".headball", { y: -100, opacity: 0})
       .from("hr", { x: 600, opacity: 0, duration: 2 }, "-=2")
-      .to("hr", { x:-50, opacity: 0,}, "-=4")
+      
       .from(".myButtons", { y: 30, opacity: 0, stagger: 0.3, duration: 1 }, "-=2")
       .from(".headball h1", {opacity: 0})
       

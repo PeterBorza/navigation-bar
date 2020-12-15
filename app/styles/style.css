@@ -103,6 +103,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 
 .section {
@@ -150,80 +151,5 @@ ul a:hover {
     transform: translateY(0px);
     pointer-events: all;
   }
-}
-
-.myButtons {
-  height: 4vh;
-  width: 30%;
-  outline: none;
-  line-height: 100%;
-  border: none;
-  background-color: transparent;
-  border-radius: 3px;
-  color: bisque;
-  font-size: 24px;
-  padding: 2px;
-  font-family: "Mitr", sans-serif;
-}
-
-.myButtons:hover {
-  color: #4b2c05;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.container {
-  position: absolute;
-  width: 40%;
-  height: 80vh;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: rgba(22, 22, 22, 0.6); */
-  /* display: none;  */
-  opacity: 0;
-}
-
-/* card small size */
-.text-card {
-  position: relative;
-  margin: auto;
-  width: 35%;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* display: none;  */
-  background-color: #bd9561;
-  box-shadow: 5px 9px 25px #583a14;
-  border: 1px solid white;
-  color: black;
-  border-radius: 10px;
-  transform: scale(0) translateY(-200px);
-  opacity: 0;
-  transition: all 1s ease;
-}
-
-/* when clicking onany listelement while card is already up */
-.next-card {
-  animation: nextcard 1s forwards;
-}
-
-@keyframes nextcard {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* card when its onscreen */
-.text-card.open {
-  transform: scale(1) translateY(0px);
-  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

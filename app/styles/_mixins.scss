@@ -50,14 +50,21 @@
 
 
 
-@mixin spaceAround($direction) {
+@mixin fAround($direction) {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: $direction;
 }
-@mixin justifyCenter {
+@mixin fCenter($direction) {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: $direction;
+}
+@mixin fBetween($direction) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: $direction;
 }
