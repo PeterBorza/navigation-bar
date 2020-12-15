@@ -1,0 +1,229 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+html *, html *::after, html *::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, bisque, #9b703c, #442a0a);
+  font-family: "Mitr", sans-serif;
+  /* overflow: hidden; */
+}
+
+.headball {
+  height: 0vh;
+  display: none;
+}
+
+.headball {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+}
+
+.ball {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  perspective: 1000px;
+  border: 1px double transparent;
+  box-shadow: 2px 4px 20px white;
+  animation: roll 5s infinite alternate;
+  animation-timing-function: cubic-bezier(0.28, 0.18, 0.8, 0.55);
+}
+
+@keyframes roll {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(560px);
+  }
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  transform: rotateZ(-45deg) rotateY(10deg);
+  overflow: hidden;
+  border: 1px solid #630404;
+  animation: ball-line 2s infinite alternate-reverse linear;
+}
+
+@keyframes ball-line {
+  0% {
+    transform: rotateZ(-45deg) rotateY(10deg) scaleX(1);
+    color: #dfa45d;
+  }
+  50% {
+    transform: rotateZ(0deg) rotateY(-15deg) scaleX(0.7);
+    color: #725b3f;
+  }
+  100% {
+    transform: rotateZ(45deg) rotateY(0deg) scaleX(1);
+    color: #3f2e19;
+  }
+}
+
+.myButtons {
+  height: 4vh;
+  width: 30%;
+  outline: none;
+  line-height: 100%;
+  border: none;
+  background-color: transparent;
+  border-radius: 3px;
+  color: bisque;
+  font-size: 24px;
+  padding: 2px;
+  font-family: "Mitr", sans-serif;
+}
+
+.myButtons:hover {
+  color: #4b2c05;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.drop-menu {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  width: 25%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+ul {
+  opacity: 0;
+  transform: translateY(50px);
+  pointer-events: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+ul a:hover {
+  color: white;
+}
+
+.open {
+  animation: drop 500ms ease-out  1 forwards;
+}
+
+@keyframes drop {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    pointer-events: none;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: all;
+  }
+}
+
+.myButtons {
+  height: 4vh;
+  width: 30%;
+  outline: none;
+  line-height: 100%;
+  border: none;
+  background-color: transparent;
+  border-radius: 3px;
+  color: bisque;
+  font-size: 24px;
+  padding: 2px;
+  font-family: "Mitr", sans-serif;
+}
+
+.myButtons:hover {
+  color: #4b2c05;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.container {
+  position: absolute;
+  width: 40%;
+  height: 80vh;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(22, 22, 22, 0.6); */
+  /* display: none;  */
+  opacity: 0;
+}
+
+/* card small size */
+.text-card {
+  position: relative;
+  margin: auto;
+  width: 35%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none;  */
+  background-color: #bd9561;
+  box-shadow: 5px 9px 25px #583a14;
+  border: 1px solid white;
+  color: black;
+  border-radius: 10px;
+  transform: scale(0) translateY(-200px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+/* when clicking onany listelement while card is already up */
+.next-card {
+  animation: nextcard 1s forwards;
+}
+
+@keyframes nextcard {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* card when its onscreen */
+.text-card.open {
+  transform: scale(1) translateY(0px);
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

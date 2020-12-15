@@ -1,0 +1,26 @@
+@import "./mixins";
+@import "./variables";
+
+
+
+// button and css animation to it
+
+.myButtons {
+    height: 4vh;
+    width: 30%;
+    outline: none;
+    line-height: 100%;
+    border: none;
+    // border: $coral;
+    background-color: transparent;
+    border-radius: 3px;
+    color: bisque;
+    font-size: 24px;
+    padding: 2px ;
+    font-family: "Mitr", sans-serif;
+    &:hover{
+        color:rgb(75, 44, 5);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

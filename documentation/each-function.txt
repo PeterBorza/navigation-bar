@@ -1,0 +1,6 @@
+$.each(ARRAY, function(){
+		$("#list").append("<li></li>");
+		$("#list li").each(function(i){
+			$(this).text(ARRAY[i]);
+		})
+	});

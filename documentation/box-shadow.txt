@@ -1,0 +1,5 @@
+box-shadow : inset 0px 0px 0px 0px color;
+1 : horizontal line-up;
+2 : vertical line-up;
+3 : blur;
+4 : size of solid color , then blur
